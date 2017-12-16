@@ -5,13 +5,8 @@
 * Run Appium as an administrator
 * npm install (based on the package.json)
 
-ALTERNATIVELY
-* NOTE: you can install appium, but you need to do it globally and then run appium from an commmand prompt as administrator
-
-
-
-# Then install your javscript editor of choice
-* I've personally gone to vs code
+# Alternatively
+* You can install appium, but you need to do it globally and then run appium from an commmand prompt as an administrator
 
 # To Execute
-* 
+* Run 'mocha' from the terminal
