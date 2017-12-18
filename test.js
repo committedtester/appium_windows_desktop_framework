@@ -1,33 +1,22 @@
+require("./helpers/setup");
+serverConfig = require('./helpers/appium-servers');
+var serverConfig = serverConfig.local;
 var wd = require("wd");
-var chai = require("chai");
-var chaiAsPromised = require("chai-as-promised");
-chai.use(chaiAsPromised);
-var should = chai.should();
-//enable chai assertion chaining
-chaiAsPromised.transferPromiseness = wd.transferPromiseness;
+var calculator = require('./helpers/capabilities');
 
-var serverConfig = {
-    host:'127.0.0.1',
-    port:4723,
+describe('test calculator',function(){
+    var driver;
 
-};
-
-var capabilities = {
-    app:'C:\\Windows\\System32\\notepad.exe',
-    platformName:'Windows',
-    deviceName:'WindowsPC'
-};
-
-var driver;
-
-describe('test notepad',function(){
-it('test launch notepad',function(done){
+it('test launch calculator',function(done){
 
   driver = wd.promiseChainRemote(serverConfig);
   console.log(driver)
-  this.timeout(10000);
-    var cap=driver.init(capabilities);
-    console.log(cap)
+  //this.timeout(10000);
+    var cap=driver.init(calculator);
+    console.log(cap);
+    driver.elementByName("Edit").click();
+    driver.elementByXPath("//MenuItem[starts-with(@Name, \"Time/Date\")]").click();
+
          done();
 })
 });
