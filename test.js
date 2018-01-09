@@ -22,7 +22,7 @@ it('test launch calculator',function(done){
     var window = cap.elementByName("Calculator");
 
     window.elementByAccessibilityId("MenuBar").elementByName("View").click()
-    .elementByAccessibilityId("MenuBar").elementByName("Standard").click()
+    .elementByAccessibilityId("MenuBar").elementByName("Standard	Alt+1").click()
     .elementByName("2").click()
     .elementByName("Add").click()
     .elementByName("2").click()

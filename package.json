@@ -4,7 +4,8 @@
   "description": "committed Tester's Appium for Windows Automation framework",
   "dependencies": {
     "selenium-webdriver": "^3.5.0",
-    "wd": "^1.5.0"
+    "wd": "^1.5.0",
+    "appium": "1.7.2"
   },
   "devDependencies": {
     "chai": "^4.1.2",
