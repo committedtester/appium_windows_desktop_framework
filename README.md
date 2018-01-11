@@ -1,3 +1,7 @@
+# Install a basic calculator (non windows app)
+https://winaero.com/blog/get-calculator-from-windows-8-and-windows-7-in-windows-10/
+
+
 # To replicate locally (with command line appium)
 * Install node.js* 
 * npm install -g appium as an administrator
